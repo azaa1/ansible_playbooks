@@ -1,0 +1,8 @@
+--- # Start of YAML file
+- name: Name of the Play
+  hosts: localhost
+  tasks:
+    - name: Name of Task1
+      yum: # module
+        name: '*'
+        state: latest 
