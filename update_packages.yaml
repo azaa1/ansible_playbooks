@@ -1,6 +1,6 @@
 --- # Start of YAML file
 - name: Update Packages, Install Packages, Create and insert lines to a file
-  hosts: localhost
+  hosts: managed_hosts
   tasks:
     - name: Update all "yum" packages
       yum: # module
