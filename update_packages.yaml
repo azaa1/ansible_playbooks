@@ -5,4 +5,21 @@
     - name: Name of Task1
       yum: # module
         name: '*'
-        state: latest 
+        state: latest
+
+    - name: Name of Task2
+      yum: # module
+        name: ["vim", "tree", "wget", "curl"]
+        state: latest
+
+    - name: Name of Task3
+      file: # module
+        path: /tmp/file1_ansible
+        state: touch
+    
+    - name: Name of Task4
+      blockinfile:
+        path: /tmp/file1_ansible
+        block: |
+          this is line one
+          this is line two
