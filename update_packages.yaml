@@ -9,7 +9,7 @@
 
     - name: Install Packages
       yum: # module
-        name: ["vim", "tree", "wget", "curl"]
+        name: ["vim", "tree", "wget"]
         state: latest
 
     - name: Create an empty file
