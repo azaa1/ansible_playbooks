@@ -1,0 +1,19 @@
+---
+- name: Nginx Installation and Start & Enable
+  hosts: host1
+  tasks:
+    - name: Install EPEL-RELEASE
+      yum:
+        name: epel-release
+        state: latest
+    
+    - name: Install Nginx
+      yum:
+        name: nginx
+        state: latest
+    
+    - name: Start & Enable Nginx
+      systemd:
+        name: nginx
+        state: started
+        enabled: yes
