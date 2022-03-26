@@ -1,6 +1,7 @@
 ---
 - name: Nginx Installation and Start & Enable
   hosts: host1
+  gather_facts: no
   tasks:
     - name: Install EPEL-RELEASE
       yum:
