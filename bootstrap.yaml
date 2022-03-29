@@ -1,13 +1,15 @@
 ---
 - name: Bootstrap servers
   hosts: group1
+  vars:
+    my_variable: "yes"
   gather_facts: yes
   tasks:
     - name: Install Packages on CentOS
       yum:
         name: ["vim", "curl", "wget", "tree"]
         state: latest
-      when: ansible_pkg_mgr == "yum"
+      when: ansible_pkg_mgr == "yum" and my_variable == "yes"
 
     - name: Install Packages on Ubuntu
       apt:
